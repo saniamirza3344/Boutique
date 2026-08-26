@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMORA Boutique | Effortless Elegance</title>
+<meta name="description" content="Discover SMORA Boutique — thoughtfully curated women's fashion, timeless styles and elegant pieces designed for every beautiful moment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= ANNOUNCEMENT BAR ================= -->
+<div class="announce-bar" id="announceBar">
+  <p>FREE DELIVERY ON ORDERS ABOVE $100&nbsp;&nbsp;•&nbsp;&nbsp;NEW COLLECTION NOW LIVE&nbsp;&nbsp;•&nbsp;&nbsp;SHOP THE AUTUMN EDIT</p>
+</div>
+
+<!-- ================= NAVIGATION ================= -->
+<header class="site-header" id="siteHeader">
+  <nav class="navbar">
+    <a href="#home" class="logo" aria-label="SMORA Boutique home">
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 60 60" width="42" height="42">
+          <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1"/>
+          <text x="30" y="38" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="24" fill="currentColor">SM</text>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <span class="logo-name">SMORA</span>
+        <span class="logo-sub">BOUTIQUE</span>
+      </span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#new-arrivals" class="nav-link">Shop</a></li>
+      <li><a href="#new-arrivals" class="nav-link">New Arrivals</a></li>
+      <li><a href="#collections" class="nav-link">Collections</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7.5-4.6-10-9.1C.5 8.4 2.3 5 6 5c2.2 0 3.8 1.3 6 3.6C14.2 6.3 15.8 5 18 5c3.7 0 5.5 3.4 4 6.9C19.5 16.4 12 21 12 21z"/></svg>
+        <span class="badge" id="wishlistCount">0</span>
+      </button>
+      <button class="icon-btn" id="bagToggle" aria-label="Shopping bag">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge" id="bagCount">0</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ================= SEARCH OVERLAY ================= -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="overlay-close" id="searchClose" aria-label="Close search">&times;</button>
+  <div class="search-panel">
+    <p class="eyebrow">Search SMORA</p>
+    <div class="search-row">
+      <input type="text" id="searchInput" placeholder="Search dresses, sets, blazers…" autocomplete="off">
+      <button id="searchBtn">Search</button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</div>
+
+<!-- ================= MINI CART ================= -->
+<div class="cart-panel" id="cartPanel">
+  <div class="cart-head">
+    <p class="eyebrow">Your Bag</p>
+    <button class="overlay-close" id="cartClose" aria-label="Close bag">&times;</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty">Your bag is feeling light. Time to add something beautiful.</p>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Total</span><span id="cartTotal">$0</span></div>
+    <button class="btn btn-dark btn-full">Checkout</button>
+  </div>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<main id="home">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1600&q=80" alt="Woman in an elegant neutral-toned dress standing in a softly lit boutique interior" loading="eager">
+    </div>
+    <div class="hero-content reveal">
+      <p class="eyebrow eyebrow-light">Autumn Edit — Now Live</p>
+      <h1>Effortlessly<br>Elegant</h1>
+      <p class="hero-sub">Discover thoughtfully selected styles designed to make every moment feel beautifully yours.</p>
+      <div class="hero-actions">
+        <a href="#new-arrivals" class="btn btn-light">Shop New Arrivals</a>
+        <a href="#collections" class="btn btn-outline-light">Explore Collection</a>
+      </div>
+    </div>
+    <div class="ribbon-divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    </div>
+  </section>
+
+  <!-- ================= FEATURED COLLECTIONS ================= -->
+  <section class="section collections" id="collections">
+    <div class="section-head reveal">
+      <p class="eyebrow">Curated Edits</p>
+      <h2>Featured Collections</h2>
+    </div>
+    <div class="collection-grid">
+      <article class="collection-card reveal">
+        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80" alt="Neutral-toned everyday wardrobe pieces on a clothing rail" loading="lazy">
+        <div class="collection-overlay">
+          <h3>The Everyday Edit</h3>
+          <p>Effortless pieces for your everyday wardrobe.</p>
+          <a href="#new-arrivals" class="btn btn-outline-light btn-sm">Shop the Edit</a>
+        </div>
+      </article>
+      <article class="collection-card reveal">
+        <img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=800&q=80" alt="Refined evening silhouette in soft champagne tones" loading="lazy">
+        <div class="collection-overlay">
+          <h3>The Elegance Edit</h3>
+          <p>Refined silhouettes made for unforgettable moments.</p>
+          <a href="#new-arrivals" class="btn btn-outline-light btn-sm">Shop the Edit</a>
+        </div>
+      </article>
+      <article class="collection-card reveal">
+        <img src="https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=800&q=80" alt="Soft feminine knitwear draped elegantly" loading="lazy">
+        <div class="collection-overlay">
+          <h3>Soft &amp; Feminine</h3>
+          <p>Delicate styles with a modern romantic touch.</p>
+          <a href="#new-arrivals" class="btn btn-outline-light btn-sm">Shop the Edit</a>
+        </div>
+      </article>
+      <article class="collection-card reveal">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=80" alt="Elegant occasion dress styled for a special evening" loading="lazy">
+        <div class="collection-overlay">
+          <h3>The Occasion Edit</h3>
+          <p>Beautiful looks for your special moments.</p>
+          <a href="#new-arrivals" class="btn btn-outline-light btn-sm">Shop the Edit</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <div class="ribbon-divider muted" aria-hidden="true"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20" fill="none" stroke="currentColor" stroke-width="1"/></svg></div>
+
+  <!-- ================= NEW ARRIVALS ================= -->
+  <section class="section" id="new-arrivals">
+    <div class="section-head reveal">
+      <p class="eyebrow">Fresh In</p>
+      <h2>New Arrivals</h2>
+      <p class="section-sub">Fresh styles, timeless details.</p>
+    </div>
+
+    <div class="filter-bar reveal" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="dresses">Dresses</button>
+      <button class="filter-btn" data-filter="tops">Tops</button>
+      <button class="filter-btn" data-filter="sets">Sets</button>
+      <button class="filter-btn" data-filter="outerwear">Outerwear</button>
+      <button class="filter-btn" data-filter="accessories">Accessories</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"><!-- injected by JS --></div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section about" id="about">
+    <div class="about-media reveal">
+      <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&w=900&q=80" alt="Warm, minimal boutique interior with curated clothing displays" loading="lazy">
+    </div>
+    <div class="about-content reveal">
+      <p class="eyebrow">Our Story</p>
+      <h2>Made For Your Moments</h2>
+      <p>SMORA BOUTIQUE is a thoughtfully curated fashion destination for women who believe style should feel effortless, confident and uniquely their own.</p>
+      <p>From timeless wardrobe essentials to statement pieces, every collection is selected with a love for beautiful details, quality and modern femininity.</p>
+      <a href="#" class="btn btn-outline-dark">Our Story</a>
+    </div>
+  </section>
+
+  <div class="ribbon-divider muted" aria-hidden="true"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,20 C240,0 480,40 720,20 C960,0 1200,40 1440,20" fill="none" stroke="currentColor" stroke-width="1"/></svg></div>
+
+  <!-- ================= SHOP BY CATEGORY ================= -->
+  <section class="section category-section">
+    <div class="section-head reveal">
+      <p class="eyebrow">Browse</p>
+      <h2>Shop By Category</h2>
+    </div>
+    <div class="category-grid">
+      <a href="#new-arrivals" class="category-card reveal" data-filter-jump="dresses">
+        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=500&q=80" alt="Dresses category" loading="lazy">
+        <span>Dresses</span>
+      </a>
+      <a href="#new-arrivals" class="category-card reveal" data-filter-jump="tops">
+        <img src="https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=500&q=80" alt="Tops category" loading="lazy">
+        <span>Tops</span>
+      </a>
+      <a href="#new-arrivals" class="category-card reveal" data-filter-jump="sets">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80" alt="Co-ord sets category" loading="lazy">
+        <span>Sets</span>
+      </a>
+      <a href="#new-arrivals" class="category-card reveal" data-filter-jump="outerwear">
+        <img src="https://images.unsplash.com/photo-1591369822096-ffd140ec948f?auto=format&fit=crop&w=500&q=80" alt="Outerwear category" loading="lazy">
+        <span>Outerwear</span>
+      </a>
+      <a href="#new-arrivals" class="category-card reveal" data-filter-jump="accessories">
+        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=80" alt="Accessories category" loading="lazy">
+        <span>Accessories</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= BEST SELLERS ================= -->
+  <section class="section best-sellers">
+    <div class="section-head reveal">
+      <p class="eyebrow">Customer Favorites</p>
+      <h2>The Smora Edit</h2>
+      <p class="section-sub">Pieces our customers can't stop loving.</p>
+    </div>
+    <div class="product-grid" id="bestSellerGrid"><!-- injected by JS --></div>
+  </section>
+
+  <!-- ================= PROMO BANNER ================= -->
+  <section class="promo-banner">
+    <img src="https://images.unsplash.com/photo-1487222477894-8943e31ef7b2?auto=format&fit=crop&w=1600&q=80" alt="Woman walking confidently in an elegant neutral outfit" loading="lazy">
+    <div class="promo-content reveal">
+      <h2>Your Next Favorite Look Is Waiting</h2>
+      <p>Discover timeless pieces designed to move with you.</p>
+      <a href="#new-arrivals" class="btn btn-light">Shop The Collection</a>
+    </div>
+  </section>
+
+  <!-- ================= WHY CHOOSE SMORA ================= -->
+  <section class="section why-section">
+    <div class="section-head reveal">
+      <p class="eyebrow">The Smora Promise</p>
+      <h2>Why Choose Smora</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1"/><path d="M12 20l5 5 11-11" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+        <h3>Curated With Care</h3>
+        <p>Every piece is thoughtfully selected.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 40 40" width="34" height="34"><path d="M20 4l4.5 9.5L34 15l-7 7 1.7 10L20 27l-8.7 5L13 22 6 15l9.5-1.5z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3>Quality First</h3>
+        <p>Beautiful styles made to be loved.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 40 40" width="34" height="34"><rect x="8" y="12" width="24" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 18h24" stroke="currentColor" stroke-width="1.2"/><path d="M14 12V8h12v4" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3>Easy Shopping</h3>
+        <p>A simple and effortless shopping experience.</p>
+      </div>
+      <div class="why-card reveal">
+        <svg viewBox="0 0 40 40" width="34" height="34"><path d="M20 33S6 24.6 6 15.3C6 10.2 9.9 7 14 7c3 0 5.2 1.7 6 3.5C20.8 8.7 23 7 26 7c4.1 0 8 3.2 8 8.3C34 24.6 20 33 20 33z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <h3>Customer Love</h3>
+        <p>Your happiness is always our priority.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="ribbon-divider muted" aria-hidden="true"><svg viewBox="0 0 1440 40" preserveAspectRatio="none"><path d="M0,20 C240,40 480,0 720,20 C960,40 1200,0 1440,20" fill="none" stroke="currentColor" stroke-width="1"/></svg></div>
+
+  <!-- ================= LOOKBOOK ================= -->
+  <section class="section lookbook">
+    <div class="section-head reveal">
+      <p class="eyebrow">Editorial</p>
+      <h2>The Smora Lookbook</h2>
+      <p class="section-sub">Style inspiration for every mood, moment and season.</p>
+    </div>
+    <div class="lookbook-grid">
+      <img class="lb-1 reveal" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Lookbook editorial styling one" loading="lazy">
+      <img class="lb-2 reveal" src="https://images.unsplash.com/photo-1596783074918-c84cb06531ca?auto=format&fit=crop&w=700&q=80" alt="Lookbook editorial styling two" loading="lazy">
+      <img class="lb-3 reveal" src="https://images.unsplash.com/photo-1495385794356-15371f348c31?auto=format&fit=crop&w=700&q=80" alt="Lookbook editorial styling three" loading="lazy">
+      <img class="lb-4 reveal" src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=900&q=80" alt="Lookbook editorial styling four" loading="lazy">
+    </div>
+    <div class="center-btn reveal"><a href="#" class="btn btn-outline-dark">View Lookbook</a></div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section testimonials">
+    <div class="section-head reveal">
+      <p class="eyebrow">Kind Words</p>
+      <h2>Loved By Women Like You</h2>
+    </div>
+    <div class="testimonial-grid">
+      <article class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Absolutely beautiful pieces and even more beautiful packaging. SMORA has quickly become one of my favorite boutiques."</p>
+        <span class="t-name">— Ayesha</span>
+      </article>
+      <article class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Every detail feels so thoughtfully chosen. The quality and style are amazing."</p>
+        <span class="t-name">— Sarah</span>
+      </article>
+      <article class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Elegant, comfortable and exactly what I was looking for."</p>
+        <span class="t-name">— Hira</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= INSTAGRAM GALLERY ================= -->
+  <section class="section instagram-section">
+    <div class="section-head reveal">
+      <p class="eyebrow">@smoraboutique</p>
+      <h2>Follow The Smora Journey</h2>
+    </div>
+    <div class="insta-grid">
+      <a class="insta-item reveal" href="#"><img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=70" alt="Instagram post 1" loading="lazy"><span class="insta-icon">◎</span></a>
+      <a class="insta-item reveal" href="#"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=400&q=70" alt="Instagram post 2" loading="lazy"><span class="insta-icon">◎</span></a>
+      <a class="insta-item reveal" href="#"><img src="https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=400&q=70" alt="Instagram post 3" loading="lazy"><span class="insta-icon">◎</span></a>
+      <a class="insta-item reveal" href="#"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=400&q=70" alt="Instagram post 4" loading="lazy"><span class="insta-icon">◎</span></a>
+      <a class="insta-item reveal" href="#"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=400&q=70" alt="Instagram post 5" loading="lazy"><span class="insta-icon">◎</span></a>
+      <a class="insta-item reveal" href="#"><img src="https://images.unsplash.com/photo-1490114538077-0a7f8cb49891?auto=format&fit=crop&w=400&q=70" alt="Instagram post 6" loading="lazy"><span class="insta-icon">◎</span></a>
+    </div>
+    <div class="center-btn reveal"><a href="#" class="btn btn-outline-dark">Follow Us</a></div>
+  </section>
+
+  <!-- ================= NEWSLETTER ================= -->
+  <section class="newsletter">
+    <div class="newsletter-inner reveal">
+      <p class="eyebrow eyebrow-light">Stay In Touch</p>
+      <h2>Be The First To Know</h2>
+      <p>Join the SMORA circle for new arrivals, styling inspiration and exclusive offers.</p>
+      <form id="newsletterForm" novalidate>
+        <input type="email" id="newsletterEmail" placeholder="Enter your email address">
+        <button type="submit">Join The List</button>
+      </form>
+      <p class="form-msg" id="newsletterMsg"></p>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact-section" id="contact">
+    <div class="contact-info reveal">
+      <p class="eyebrow">Get In Touch</p>
+      <h2>Let's Connect</h2>
+      <ul>
+        <li><strong>Email</strong><span>socialzonemarketing752@gmail.com</span></li>
+        <li><strong>Phone</strong><span>+92 300 1234567</span></li>
+        <li><strong>Location</strong><span>Lahore, Pakistan</span></li>
+        <li><strong>Opening Hours</strong><span>Monday – Saturday, 11:00 AM – 8:00 PM</span></li>
+      </ul>
+    </div>
+    <form class="contact-form reveal" id="contactForm" novalidate>
+      <input type="text" id="contactName" placeholder="Name">
+      <input type="email" id="contactEmail" placeholder="Email">
+      <textarea id="contactMessage" rows="5" placeholder="Message"></textarea>
+      <button type="submit" class="btn btn-dark btn-full">Send Message</button>
+      <p class="form-msg" id="contactMsg"></p>
+    </form>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#home" class="logo logo-footer">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 60 60" width="42" height="42">
+            <circle cx="30" cy="30" r="28" fill="none" stroke="currentColor" stroke-width="1"/>
+            <text x="30" y="38" text-anchor="middle" font-family="'Cormorant Garamond', serif" font-size="24" fill="currentColor">SM</text>
+          </svg>
+        </span>
+        <span class="logo-text">
+          <span class="logo-name">SMORA</span>
+          <span class="logo-sub">BOUTIQUE</span>
+        </span>
+      </a>
+      <p>Effortless style. Beautifully yours.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <a href="#new-arrivals">New Arrivals</a>
+      <a href="#collections">Collections</a>
+      <a href="#new-arrivals">Best Sellers</a>
+    </div>
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms &amp; Conditions</a>
+    </div>
+    <div class="footer-social">
+      <h4>Follow</h4>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Pinterest">PIN</a>
+        <a href="#" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 SMORA BOUTIQUE. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- ================= QUICK VIEW MODAL ================= -->
+<div class="modal-scrim" id="modalScrim">
+  <div class="quick-view-modal" id="quickViewModal">
+    <button class="overlay-close" id="modalClose" aria-label="Close quick view">&times;</button>
+    <div class="qv-media">
+      <img id="qvImage" src="" alt="">
+    </div>
+    <div class="qv-content">
+      <p class="eyebrow" id="qvCategory"></p>
+      <h3 id="qvName"></h3>
+      <p class="qv-price" id="qvPrice"></p>
+      <p class="qv-desc" id="qvDesc"></p>
+      <div class="qv-sizes">
+        <span class="qv-label">Size</span>
+        <div class="size-options" id="qvSizes">
+          <button type="button" class="size-btn">XS</button>
+          <button type="button" class="size-btn">S</button>
+          <button type="button" class="size-btn">M</button>
+          <button type="button" class="size-btn">L</button>
+        </div>
+      </div>
+      <div class="qv-qty">
+        <span class="qv-label">Quantity</span>
+        <div class="qty-control">
+          <button type="button" id="qtyMinus">−</button>
+          <span id="qtyValue">1</span>
+          <button type="button" id="qtyPlus">+</button>
+        </div>
+      </div>
+      <button class="btn btn-dark btn-full" id="qvAddBtn">Add To Bag</button>
+      <button class="btn btn-outline-dark btn-full qv-order-btn" id="qvOrderBtn">Order Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= TOAST + BACK TO TOP ================= -->
+<div class="toast" id="toast"></div>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
